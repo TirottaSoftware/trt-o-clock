@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Watch {
+  id          Int     @id @default(autoincrement())
+  brand       Brand
+  model       String  @db.VarChar(255)
+  price       Decimal @db.Decimal(6, 2)
+  description String  @db.Text
+  imageUrl    String  @db.VarChar(255)
+  color       Color
+  specs       Json    @db.Json
+  features    Json    @db.Json
+}
+
+enum Brand {
+  OMEGA
+  CASIO
+  DANIELWELLINGTON
+  SEIKO
+}
+
+enum Color {
+  WHITE
+  BLACK
+  GREEN
+  RED
+  BLUE
+  YELLOW
+  MILITARY
+  DARKGREY
+  BROWN
+  BEIGE
+  GOLD
+  ROSEGOLD
+  SILVER
+}
