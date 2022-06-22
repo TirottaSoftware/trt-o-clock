@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Taviraj', serif;
+    --font-heading: 'Heebo', sans-serif;
+    --color-beige: #E8D3B9
+}
