@@ -66,6 +66,7 @@ section{
     height: 100vh;
     background-size: cover;
     background-image: url('./assets/favourites.jpg');
+    position: relative;
 }
 
 @media screen and (max-width: 500px) {

@@ -1,5 +1,5 @@
-import Navbar from './components/Navbar/Navbar'
-import Sidebar from './components/Sidebar/Sidebar';
+import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar';
 import { useState } from 'react'
 
 import casioLogo from './assets/casio-logo.png'
@@ -9,6 +9,7 @@ import omegaLogo from './assets/omega-logo.png'
 
 import './globals.css'
 import './Home.css'
+import ProductCarousel from './components/ProductCarousel';
 
 function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -37,7 +38,9 @@ function Home() {
       </section>
       <section id="favourites">
         <h1 className='section-title'>All-Time Favourites</h1>
-        <div className='favourites-hero'></div>
+        <div className='favourites-hero'>
+          <ProductCarousel />
+        </div>
       </section>
     </div>
   );

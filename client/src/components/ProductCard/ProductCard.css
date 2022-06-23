@@ -1,0 +1,17 @@
+.card{
+    height: 500px;
+    color: black;
+    width: 130%;
+    background: white;
+    margin: 25px -15%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .card{
+        width: 140%;
+        height: 400px;
+        margin: 25px -20%;
+    }
+}

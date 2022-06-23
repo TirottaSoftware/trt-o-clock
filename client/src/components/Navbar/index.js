@@ -1,6 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
-import Burger from '../Burger/Burger';
+import Burger from '../Burger';
 import logo from '../../assets/logo.png'
 import './Navbar.css'
 
