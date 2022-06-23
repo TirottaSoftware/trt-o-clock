@@ -4,7 +4,7 @@ import Burger from '../Burger/Burger';
 import logo from '../../assets/logo.png'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
     return (
         <nav className='navbar'>
             <div className='nav-left'>
@@ -31,7 +31,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Burger />
+                    <Burger onClick={toggleSidebar} />
                 </li>
             </div>
         </nav>

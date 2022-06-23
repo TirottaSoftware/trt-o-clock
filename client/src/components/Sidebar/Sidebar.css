@@ -1,0 +1,29 @@
+.sidebar{
+    height: 100%;
+    background: #080808;
+    width: 25%;
+    margin-left: 75%;
+    position: absolute;
+    transition: .3s ease-in-out;
+    z-index: 1;
+    color: white;
+    position: fixed;
+}
+
+.sidebar-hidden{
+    transform: translateX(100%);
+}
+.btn-hide{
+    color: white;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding: 40px;
+}
+
+@media screen and (max-width:500px) {
+    .sidebar{
+        width: 100%;
+        margin: 0;
+    }
+}

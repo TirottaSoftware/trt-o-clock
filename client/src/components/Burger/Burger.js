@@ -1,9 +1,9 @@
 import React from 'react'
 import './Burger.css'
 
-const Burger = () => {
+const Burger = ({ onClick }) => {
     return (
-        <div className='burger'>
+        <div className='burger' onClick={onClick}>
             <div className='burger-line'></div>
             <div className='burger-line'></div>
         </div>

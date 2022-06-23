@@ -1,11 +1,16 @@
 import Navbar from './components/Navbar/Navbar'
+import Sidebar from './components/Sidebar/Sidebar';
+import { useState } from 'react'
 import './globals.css'
 import './Home.css'
 
 function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div>
-      <Navbar />
+      <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      <Sidebar open={sidebarOpen} hideSidebar={() => setSidebarOpen(false)} />
       <div className='hero'>
         <div className='hero-text'>
           <h1>EXPRESS YOURSELF WITH PROFESSIONALISM </h1>
