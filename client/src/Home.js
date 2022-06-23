@@ -1,6 +1,12 @@
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar';
 import { useState } from 'react'
+
+import casioLogo from './assets/casio-logo.png'
+import dwLogo from './assets/daniel-wellington-logo.png'
+import seikoLogo from './assets/seiko-logo.png'
+import omegaLogo from './assets/omega-logo.png'
+
 import './globals.css'
 import './Home.css'
 
@@ -20,6 +26,19 @@ function Home() {
           <button className='btn-cta'>Buy Now</button>
         </div>
       </div>
+      <section id="brands">
+        <h1 className='section-title'>Our Brands</h1>
+        <div className='brands-container'>
+          <img src={casioLogo} alt='casio-logo' />
+          <img src={dwLogo} alt='dw-logo' />
+          <img src={seikoLogo} alt='seiko-logo' />
+          <img src={omegaLogo} alt='omega-logo' />
+        </div>
+      </section>
+      <section id="favourites">
+        <h1 className='section-title'>All-Time Favourites</h1>
+        <div className='favourites-hero'></div>
+      </section>
     </div>
   );
 }

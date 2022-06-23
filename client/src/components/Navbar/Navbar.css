@@ -6,6 +6,10 @@
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
+    transition: .3s ease-in-out;
+}
+.navbar:hover{
+    background: #080808;
 }
 .nav-left{
     padding: 1% 10%;

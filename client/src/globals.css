@@ -4,6 +4,7 @@
 }
 body{
     overflow-x: hidden;
+    background: #080808;
 }
 :root{
     --font-primary: 'Montserrat', sans-serif;
