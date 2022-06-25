@@ -3,23 +3,29 @@ import { useState } from "react";
 import Slider from "react-slick";
 import ProductCard from '../ProductCard/';
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/outline'
+import { gql, useQuery } from '@apollo/client'
 
-const cards = [
-    {
-        title: "Card One"
-    },
-    {
-        title: "Card Two"
-    },
-    {
-        title: "Card Three"
-    },
-    {
-        title: "Card Four"
+const QUERY_ALL_WATCHES = gql`
+    query GetAllWatches{
+        watches(first: 4) {
+            id
+            brand
+            model
+            price
+            imageUrl
+        }
     }
-]
+`
 
 const ProductCarousel = () => {
+
+    const { data, loading, error } = useQuery(QUERY_ALL_WATCHES);
+
+    console.log(data)
+
+    if (error) {
+        console.log(error)
+    }
 
     const NextArrow = ({ onClick }) => {
         return (
@@ -54,9 +60,10 @@ const ProductCarousel = () => {
     return (
         <div className="carousel-container">
             <Slider {...settings}>
-                {cards.map((card, i) => (
+                {data && data.watches.map((watch, i) => (
                     <div className={i === index ? "slide activeSlide" : "slide"}>
-                        <ProductCard title={card.title} />
+                        <ProductCard watch={watch} />
+                        {console.log(watch)}
                     </div>
                 ))}
             </Slider>

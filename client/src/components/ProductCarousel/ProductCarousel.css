@@ -13,11 +13,13 @@
   transform: scale(0.70);
   transition: transform 300ms;
   opacity: 0.5;
+  z-index: 1;
 }
 
 .activeSlide {
   transform: scale(1.1);
   opacity: 1;
+  z-index: 2;
 }
 
 .arrow {

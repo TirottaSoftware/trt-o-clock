@@ -4,10 +4,14 @@ const prisma = new PrismaClient();
 
 const resolvers = {
     Query: {
-        async watches() {
-            // get the watches from prisma and return
+        async watches(parent, args) {
+            const first = args.first;
+            if (first) {
+                const watches = await prisma.watch.findMany({ take: first });
+                return watches;
+            }
             const watches = await prisma.watch.findMany();
-            return watches
+            return watches;
         },
         async watch(parent, args) {
             const id = Number(args.id);

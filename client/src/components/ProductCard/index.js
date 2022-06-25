@@ -1,8 +1,8 @@
 import './ProductCard.css'
 
-const ProductCard = ({ title }) => {
+const ProductCard = ({ watch }) => {
     return (
-        <div className='card'>{title}</div>
+        <div className='card'>{watch.model}</div>
     )
 }
 
