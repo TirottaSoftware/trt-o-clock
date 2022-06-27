@@ -1,0 +1,70 @@
+.label-loading{
+    color: white;
+    font-size: 40px;
+    font-family: var(--font-primary);
+}
+
+.featured-container{
+    font-family: var(--font-primary);
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    color: white;
+}
+.featured-container .specs, .featured-container .description, .featured-container img{
+    width: 50%;
+}
+
+.featured-container .specs h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.featured-container .specs h2{
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.specs .specs-table .specs-row{
+    font-size: 24px;
+    display: flex;
+    width: 80%;
+    margin: 5% auto;
+    justify-content: space-between;
+}
+
+.featured-container .description{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.description img{
+    margin: 15% 0;
+}
+.description p{
+    text-align: start;
+    width: 80%;
+    margin: 5% auto;
+    font-size: 30px;
+}
+.description .btn-cta{
+    width: 80%;
+    margin: 1% 10%;
+    font-size: 24px;
+    padding: 2.5% 0;
+}
+.bg-beige{
+    background: var(--color-beige);
+    color: black;
+}
+
+@media screen and (max-width: 500px) {
+    .featured-container .specs, .featured-container .description, .featured-container img{
+        width: 100%;
+        margin: 5% 0;
+    }
+    .description img{
+        width: 80%;
+        margin: 15% auto;
+    }
+}

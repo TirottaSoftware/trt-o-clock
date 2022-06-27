@@ -1,16 +1,17 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import { useState } from 'react'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import { useState } from 'react';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-import casioLogo from './assets/casio-logo.png'
-import dwLogo from './assets/daniel-wellington-logo.png'
-import seikoLogo from './assets/seiko-logo.png'
-import omegaLogo from './assets/omega-logo.png'
+import casioLogo from './assets/casio-logo.png';
+import dwLogo from './assets/daniel-wellington-logo.png';
+import seikoLogo from './assets/seiko-logo.png';
+import omegaLogo from './assets/omega-logo.png';
 
-import './globals.css'
-import './Home.css'
+import './globals.css';
+import './Home.css';
 import ProductCarousel from './components/ProductCarousel';
+import Featured from './components/Featured'
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -49,6 +50,9 @@ function Home() {
             <ProductCarousel />
           </div>
           <button className='btn-cta'>Browse Store</button>
+        </section>
+        <section id="featured">
+          <Featured />
         </section>
       </div>
     </ApolloProvider>
