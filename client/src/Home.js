@@ -48,6 +48,7 @@ function Home() {
           <div className='favourites-hero'>
             <ProductCarousel />
           </div>
+          <button className='btn-cta'>Browse Store</button>
         </section>
       </div>
     </ApolloProvider>

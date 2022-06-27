@@ -2,7 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .carousel-container {
-  width: 40%;
+  width: 50%;
   height: 600px;
   position: absolute;
   top: 25%;
@@ -13,13 +13,11 @@
   transform: scale(0.70);
   transition: transform 300ms;
   opacity: 0.5;
-  z-index: 1;
 }
 
 .activeSlide {
   transform: scale(1.1);
   opacity: 1;
-  z-index: 2;
 }
 
 .arrow {
@@ -54,10 +52,18 @@
     margin: auto;
   }
   .next {
-    right: 10px;
+    right: 0;
   }
-  
+  .slide {
+    transform: scale(0);
+    transition: transform 500ms;
+    opacity: 0.5;
+  }
+  .activeSlide {
+    transform: scale(1.1);
+    opacity: 1;
+  }
   .prev {
-    left: 10px;
+    left: 0;
   }
 }

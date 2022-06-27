@@ -7,7 +7,7 @@ const resolvers = {
         async watches(parent, args) {
             const first = args.first;
             if (first) {
-                const watches = await prisma.watch.findMany({ take: first });
+                const watches = await prisma.watch.findMany({ take: first, where: { ATF: true } });
                 return watches;
             }
             const watches = await prisma.watch.findMany();

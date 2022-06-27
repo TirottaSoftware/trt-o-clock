@@ -20,6 +20,7 @@ model Watch {
   color       Color
   specs       Json    @db.Json
   features    Json    @db.Json
+  ATF         Boolean @default(false)
 }
 
 enum Brand {

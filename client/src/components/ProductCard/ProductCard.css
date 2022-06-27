@@ -1,18 +1,40 @@
 .card{
     height: 500px;
     color: black;
-    width: 130%;
+    width: 110%;
     background: white;
-    margin: 25px -15%;
+    margin: 25px -5%;
     border-radius: 15px;
     text-align: center;
-    border: 1px solid white;
+    background: #4b4b4b;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: var(--font-primary);
+    color: white;
+}
+
+.card img{
+    width: auto;
+    margin: 0 auto;
+    padding: 5% 0;
+    max-height: 60%;
+}
+.card h1, .card h2{
+    margin: 2% 0;
+}
+.card .btn-cta{
+    width: 70%;
+    padding: 3% 5%;
 }
 
 @media screen and (max-width: 500px) {
     .card{
-        width: 140%;
+        width: 200%;
         height: 400px;
-        margin: 25px -20%;
+        margin: 25px -50%;
+    }
+    .card img{
+        max-height: 55%;
     }
 }

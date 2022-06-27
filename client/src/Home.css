@@ -27,7 +27,7 @@
     font-family: var(--font-primary);
     font-size: 2rem;
 }
-.hero-text .btn-cta{
+.btn-cta{
     cursor: pointer;
     margin-top: 10px;
     color: white;
@@ -61,6 +61,11 @@ section{
     max-width: 15%;
 }
 
+#favourites{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 .favourites-hero{
     width: 100%;
     height: 100vh;
