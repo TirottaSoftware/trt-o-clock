@@ -53,6 +53,7 @@ function Home() {
           <button className='btn-cta'>Browse Store</button>
         </section>
         <section id="featured">
+          <h1 className='section-title'>Featured</h1>
           <Featured />
         </section>
       </div>

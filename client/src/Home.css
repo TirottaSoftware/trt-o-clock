@@ -48,6 +48,7 @@ section{
     font-family: var(--font-heading);
     font-size: 3rem;
     color: white;
+    margin: 3% 0;
 }
 .brands-container{
     width: 100%;
@@ -119,5 +120,10 @@ section{
     .brands-container img{
         margin: 5%;
         max-width: 35%;
+    }
+    .favourites-hero{
+        height: 75vh;
+        background-position: right;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/favourites.jpg');;
     }
 }

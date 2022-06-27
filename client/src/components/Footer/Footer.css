@@ -27,6 +27,7 @@
     justify-content: space-between;
 }
 .footer-links li{
+    cursor: pointer;
     margin: 2.5% 15% 2.5% 5%;
     text-align: start;
 }
