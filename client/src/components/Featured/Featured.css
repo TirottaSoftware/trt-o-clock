@@ -32,7 +32,12 @@
     margin: 5% auto;
     justify-content: space-between;
 }
-
+.specs .specs-table .specs-row label:first-child{
+    text-align: start;
+}
+.specs .specs-table .specs-row label:last-child{
+    text-align: end;
+}
 .featured-container .description{
     display: flex;
     flex-flow: column;
@@ -63,8 +68,15 @@
         width: 100%;
         margin: 5% 0;
     }
+    .specs .specs-table .specs-row, .description p {
+        font-size: 20px;
+        text-align: center;
+    }
     .description img{
         width: 80%;
         margin: 15% auto;
+    }
+    .description .btn-cta{
+        font-size: 18px;
     }
 }

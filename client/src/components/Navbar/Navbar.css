@@ -1,6 +1,6 @@
 .navbar{
     width: 100%;
-    position: fixed;
+    position: absolute;
     font-family: var(--font-primary);
     display: flex;
     box-sizing: border-box;

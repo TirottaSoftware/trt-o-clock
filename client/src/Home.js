@@ -12,6 +12,7 @@ import './globals.css';
 import './Home.css';
 import ProductCarousel from './components/ProductCarousel';
 import Featured from './components/Featured'
+import Footer from './components/Footer';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -55,6 +56,7 @@ function Home() {
           <Featured />
         </section>
       </div>
+      <Footer />
     </ApolloProvider>
   );
 }
