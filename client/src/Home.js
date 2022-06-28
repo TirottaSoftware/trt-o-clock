@@ -13,6 +13,7 @@ import './Home.css';
 import ProductCarousel from './components/ProductCarousel';
 import Featured from './components/Featured'
 import Footer from './components/Footer';
+import Carousel from './components/Carousel';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -48,7 +49,7 @@ function Home() {
         <section id="favourites">
           <h1 className='section-title'>All-Time Favourites</h1>
           <div className='favourites-hero'>
-            <ProductCarousel />
+            <Carousel />
           </div>
           <button className='btn-cta'>Browse Store</button>
         </section>

@@ -1,0 +1,81 @@
+.carousel{
+    width: 60%;
+    height: 550px;
+    margin: 10% 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    position: relative;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.arrow-prev, .arrow-next{
+    position: absolute;
+    top: 45%;
+    font-size: 24px;
+    font-family: var(--font-primary);
+    background: none;
+    border: 1px solid white;
+    padding: 1%;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-next{
+    right: 15%;
+}
+.arrow-prev{
+    left: 15%;
+}
+.carousel-slide{
+    width: 30%;
+    background: #4b4b4b;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+.active-slide{
+    transform: scale(1.1);
+    z-index: 3;
+    opacity: 1;
+}
+.prev-slide{
+    transform: translateX(-50%) scale(0.8);
+    z-index: 0;
+    opacity: 0.6;
+}
+.next-slide{
+    transform: translateX(50%) scale(0.8);
+    z-index: 0;
+    opacity: 0.6;
+}
+.progress-bar{
+    position: absolute;
+    width: 100%;
+    bottom: -15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot{
+    width: 5px;
+    height: 5px;
+    border: 1px solid white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.filled{
+    background: white;
+}

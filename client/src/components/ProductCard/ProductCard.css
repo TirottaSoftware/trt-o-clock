@@ -1,15 +1,14 @@
 .card{
-    height: 500px;
+    height: 100%;
     color: black;
-    width: 110%;
-    background: white;
-    margin: 25px -5%;
+    width: 100%;
     border-radius: 15px;
     text-align: center;
     background: #4b4b4b;
     display: flex;
     flex-flow: column;
     align-items: center;
+    font-size: 18px;
     font-family: var(--font-primary);
     color: white;
 }
