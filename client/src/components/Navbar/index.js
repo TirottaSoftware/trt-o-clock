@@ -13,7 +13,7 @@ const Navbar = ({ toggleSidebar }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link className='nav-link' to="/home">
+                    <Link className='nav-link' to="/store">
                         Shop
                     </Link>
                 </li>

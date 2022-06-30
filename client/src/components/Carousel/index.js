@@ -6,7 +6,7 @@ import { gql, useQuery } from '@apollo/client'
 
 const QUERY_ALL_WATCHES = gql`
     query GetAllWatches{
-        watches(first: 4) {
+        watches(first: 3) {
             id
             brand
             model
@@ -44,9 +44,9 @@ const Carousel = () => {
                     :
                     <div className='carousel'>
                         <button onClick={() => prevSlide()} className='arrow-prev'><ChevronLeftIcon /></button>
-                        <div className={`item-0 carousel-slide ${activeSlide === 0 && 'active-slide'} ${activeSlide === 1 && 'prev-slide'} ${activeSlide === 2 && 'next-slide'}`}><ProductCard watch={data?.watches[0]} /></div>
-                        <div className={`item-1 carousel-slide ${activeSlide === 1 && 'active-slide'} ${activeSlide === 2 && 'prev-slide'} ${activeSlide === 0 && 'next-slide'}`}><ProductCard watch={data?.watches[1]} /></div>
-                        <div className={`item-2 carousel-slide ${activeSlide === 2 && 'active-slide'} ${activeSlide === 0 && 'prev-slide'} ${activeSlide === 1 && 'next-slide'}`}><ProductCard watch={data?.watches[2]} /></div>
+                        <div className={`item-0 carousel-slide ${activeSlide === 0 && 'active-slide'} ${activeSlide === 1 && 'prev-slide'} ${activeSlide === 2 && 'next-slide'}`}><ProductCard watch={data?.watches[1]} /></div>
+                        <div className={`item-1 carousel-slide ${activeSlide === 1 && 'active-slide'} ${activeSlide === 2 && 'prev-slide'} ${activeSlide === 0 && 'next-slide'}`}><ProductCard watch={data?.watches[2]} /></div>
+                        <div className={`item-2 carousel-slide ${activeSlide === 2 && 'active-slide'} ${activeSlide === 0 && 'prev-slide'} ${activeSlide === 1 && 'next-slide'}`}><ProductCard watch={data?.watches[0]} /></div>
                         <button onClick={() => nextSlide()} className='arrow-next'><ChevronRightIcon /></button>
                         <div className='progress-bar'>
                             <div className={`dot ${activeSlide === 0 && 'filled'}`}></div>

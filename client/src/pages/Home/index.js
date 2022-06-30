@@ -1,19 +1,21 @@
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import '../../globals.css';
+import './Home.css';
+
+import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/Sidebar';
+import Featured from '../../components/Featured'
+import Footer from '../../components/Footer';
+import Carousel from '../../components/Carousel';
+
 import { useState } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-import casioLogo from './assets/casio-logo.png';
-import dwLogo from './assets/daniel-wellington-logo.png';
-import seikoLogo from './assets/seiko-logo.png';
-import omegaLogo from './assets/omega-logo.png';
+import casioLogo from '../../assets/casio-logo.png';
+import dwLogo from '../../assets/daniel-wellington-logo.png';
+import seikoLogo from '../../assets/seiko-logo.png';
+import omegaLogo from '../../assets/omega-logo.png';
+import { Link } from 'react-router-dom';
 
-import './globals.css';
-import './Home.css';
-import ProductCarousel from './components/ProductCarousel';
-import Featured from './components/Featured'
-import Footer from './components/Footer';
-import Carousel from './components/Carousel';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -51,7 +53,7 @@ function Home() {
           <div className='favourites-hero'>
             <Carousel />
           </div>
-          <button className='btn-cta'>Browse Store</button>
+          <Link to='/store' className='btn-cta'>Browse Store</Link>
         </section>
         <section id="featured">
           <h1 className='section-title'>Featured</h1>

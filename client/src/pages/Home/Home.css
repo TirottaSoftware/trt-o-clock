@@ -2,7 +2,7 @@
 .hero{
     width: 100%;
     height: 100vh;
-    background-image: url("./assets/hero.jpg");
+    background-image: url("../../assets/hero.jpg");
     background-size: cover;
 }
 .hero-text{
@@ -30,6 +30,7 @@
 .btn-cta{
     cursor: pointer;
     margin-top: 10px;
+    text-decoration: none;
     color: white;
     background: transparent;
     border: 1px solid white;
@@ -71,13 +72,13 @@ section{
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-image: url('./assets/favourites.jpg');
+    background-image: url('../../assets/favourites.jpg');
     position: relative;
 }
 
 @media screen and (max-width: 500px) {
     .hero{
-        background-image: url("./assets/hero-mobile.png");
+        background-image: url("../../assets/hero-mobile.png");
     }
     body{
         background: #080808;
@@ -124,6 +125,6 @@ section{
     .favourites-hero{
         height: 75vh;
         background-position: right;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/favourites.jpg');;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/favourites.jpg');;
     }
 }
