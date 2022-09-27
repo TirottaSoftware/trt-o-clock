@@ -5,6 +5,7 @@ import StoreCard from '../../components/StoreCard'
 import StoreFilter from "../../components/StoreFilter"
 import { gql, useQuery } from '@apollo/client'
 import { useState } from "react"
+import Sidebar from "../../components/Sidebar"
 
 const QUERY_ALL_WATCHES = gql`
     query GetWatchesByBoth($brand: String, $color: Color){
@@ -23,6 +24,7 @@ const QUERY_ALL_WATCHES = gql`
 
 const Store = () => {
 
+    const [sidebarOpen, setSidebarOpen] = useState(false);
     const [filter, setFilter] = useState({ brand: null, color: null, sort: "" });
     const { data, loading } = useQuery(QUERY_ALL_WATCHES, {
         variables: { brand: filter.brand, color: filter.color }
@@ -43,7 +45,8 @@ const Store = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+            <Sidebar open={sidebarOpen} hideSidebar={() => setSidebarOpen(false)} />
             <div className="store-hero">
             </div>
             <h1 className="store-hero-text">

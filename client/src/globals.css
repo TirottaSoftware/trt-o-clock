@@ -26,3 +26,16 @@ ul, li{
 .img-wrapper img{
     width: 100%;
 }
+.sidebar-hidden{
+    transform: translate(50%, -100%) scale(0, 0);
+    filter: blur(25px);
+    opacity: 0;
+    border-radius: 100px;
+}
+.btn-hide{
+    color: white;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 2% 3.5%;
+}

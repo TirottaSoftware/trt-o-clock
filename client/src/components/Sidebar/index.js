@@ -5,6 +5,23 @@ import './Sidebar.css';
 const Sidebar = ({ open, hideSidebar }) => {
     return (
         <div className={open ? 'sidebar' : 'sidebar sidebar-hidden'}>
+            <div className='sidebar-links'>
+                <li>
+                    <Link className='sidebar-link' to="/home">
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link className='sidebar-link' to="/store">
+                        Shop
+                    </Link>
+                </li>
+                <li>
+                    <Link className='sidebar-link' to="/home">
+                        Contact
+                    </Link>
+                </li>
+            </div>
             <div className='btn-hide' onClick={hideSidebar}>
                 <ChevronDoubleRightIcon />
             </div>
