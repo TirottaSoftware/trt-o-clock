@@ -5,7 +5,9 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer-main'>
-                <img className='logo' src={logo} alt={`TRT O'Clock Logo`} />
+                <div className="img-wrapper">
+                    <img className='logo' src={logo} alt={`TRT O'Clock Logo`} />
+                </div>
                 <div className='footer-links'>
                     <li>Terms & Conditions</li>
                     <li>Sign Up</li>

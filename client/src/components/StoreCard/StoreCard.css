@@ -49,3 +49,9 @@
     color: black;
     font-weight: 700;
 }
+
+@media screen and (max-width: 678px) {
+    .store-card{
+        width: 90%;
+    }
+}

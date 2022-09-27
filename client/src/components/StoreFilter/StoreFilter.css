@@ -23,3 +23,10 @@
 .store-filter select option{
     background: black;
 }
+
+@media screen and (max-width: 678px) {
+    .store-filter{
+        width: 90%;
+        margin-top: 25px;
+    }
+}
