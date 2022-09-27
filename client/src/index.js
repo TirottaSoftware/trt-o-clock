@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import ProductPage from "./pages/Product";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -18,6 +19,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
     </BrowserRouter>
   </ApolloProvider>

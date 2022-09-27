@@ -59,7 +59,7 @@ const Store = () => {
                     <StoreFilter type="color" options={["Silver", "Black", "Brown", "Beige", "White", "Darkgrey", "Military", "Red"]} onChange={changeFilter} />
                     <StoreFilter type="sort" options={["Alphabetically (A-Z)", "Alphabetically (Z-A)", "Price (High to Low)", "Price (Low to High)"]} onChange={changeFilter} />
                 </div>
-                <div className="product-container">
+                <div className="products-container">
                     {
                         data?.watches.length > 0 ? data?.watches.map(watch => {
                             return <StoreCard watch={watch} />
