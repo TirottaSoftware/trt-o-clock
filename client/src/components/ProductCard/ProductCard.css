@@ -22,9 +22,8 @@
 .card h1, .card h2{
     margin: 2% 0;
 }
-.card .btn-cta{
-    width: 70%;
-    padding: 3% 5%;
+.card .product-cta{
+    width: 100%;
 }
 
 @media screen and (max-width: 678px) {

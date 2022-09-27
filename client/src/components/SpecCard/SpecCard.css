@@ -18,3 +18,11 @@
     font-size: 1.15rem;
     width: 75%;
 }
+
+@media screen and (max-width: 678px) {
+    .spec-card{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+}

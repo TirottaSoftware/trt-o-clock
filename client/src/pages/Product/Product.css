@@ -77,3 +77,32 @@ span.model{
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 678px) {
+    .product-container{
+        flex-flow: column;
+        height: unset;
+    }
+    .product-container .product-body .product-price{
+        flex-flow: column;
+    }
+    .product-container .product-body .product-price p{
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    .product-container .product-body .product-price button{
+        width: 100%;
+    }
+    .product-container .img-wrapper, .product-container .product-body{
+        width: 90%;
+    }
+    .specs-container{
+        flex-flow: column;
+    }
+    .specs-section h2, .related-section h2{
+        text-align: center;
+    }
+    .related-container{
+        flex-flow: column;
+    }
+}
