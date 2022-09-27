@@ -14,7 +14,12 @@
 .store-card .img-wrapper{
     margin: auto 0;
     width: 60%;
+    cursor: pointer;
     padding: 10px;
+    transition: .5s;
+}
+.store-card .img-wrapper:hover{
+    transform: scale(1.15);
 }
 .store-card h1{
     font-size: 1.5rem;

@@ -49,4 +49,7 @@
         width: 100%;
         margin: 0;
     }
+    .sidebar-link{
+        font-size: 3rem;
+    }
 }
