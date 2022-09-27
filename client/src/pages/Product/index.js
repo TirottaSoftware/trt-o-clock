@@ -7,6 +7,7 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Sidebar from '../../components/Sidebar'
 import SpecCard from '../../components/SpecCard'
+import StoreCard from '../../components/StoreCard'
 
 const QUERY_WATCH = gql`
     query GetWatch($watchId: ID!){
@@ -24,6 +25,21 @@ const QUERY_WATCH = gql`
 
 `
 
+const QUERY_RELATED = gql`
+    query GetByBrand($first: Int, $brand: String){
+        watches(first: $first, brand: $brand) {
+            id
+            brand
+            model
+            description
+            price
+            imageUrl
+            specs
+            features
+        }
+    }
+`
+
 function ProductPage() {
 
     const { id } = useParams();
@@ -33,7 +49,13 @@ function ProductPage() {
 
 
     const watch = data?.watch;
-    console.log(watch)
+
+    const { data: related, loading: loadingRelated } = useQuery(QUERY_RELATED, {
+        variables: { first: 3, brand: watch?.brand }
+    });
+
+    console.log(related)
+
     const specs = watch?.specs;
     const features = watch?.features;
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -78,6 +100,15 @@ function ProductPage() {
                                         return <SpecCard key={s} spec={s} value={features[s]} />
                                     })
                                 }
+                            </div>
+                        </div>
+                        <div className='related-section container'>
+                            <h2>Related Products</h2>
+                            <hr />
+                            <div className='related-container'>
+                                {related?.watches.map(w => {
+                                    return <StoreCard cardStyle={'related'} watch={w} />
+                                })}
                             </div>
                         </div>
                         <Footer />

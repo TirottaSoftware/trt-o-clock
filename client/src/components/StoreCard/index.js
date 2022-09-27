@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import './StoreCard.css'
 
-const StoreCard = ({ watch }) => {
+const StoreCard = ({ watch, cardStyle }) => {
     return (
-        <div className='store-card'>
+        <div className={`store-card ${cardStyle === "related" ? "related-card" : ""}`}>
             <div className='img-wrapper'>
                 <Link className='nav-link' to={`/product/${watch.id}`}>
                     <img src={watch.imageUrl} alt='productImage' />

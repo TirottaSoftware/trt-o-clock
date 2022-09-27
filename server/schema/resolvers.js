@@ -14,6 +14,7 @@ const resolvers = {
             return watches;
         },
         async watches(parent, args) {
+            const first = args.first;
             const brand = args.brand;
             const color = args.color;
 
@@ -29,8 +30,14 @@ const resolvers = {
                 return watches;
             }
 
-            const watches = await prisma.watch.findMany({ where: filter });
-            return watches;
+            if (first) {
+                const watches = await prisma.watch.findMany({ take: first, where: filter });
+                return watches;
+            }
+            else {
+                const watches = await prisma.watch.findMany({ where: filter });
+                return watches;
+            }
 
 
         },

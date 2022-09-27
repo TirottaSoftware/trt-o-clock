@@ -50,6 +50,31 @@
     font-weight: 700;
 }
 
+.related-card{
+    background: #444444;
+    box-shadow: 15px 15px 15px 0px rgba(255, 255, 255, 0.15);
+    border: none;
+    height: auto;
+    transition: .5s;
+    max-height: 500px;
+}
+.related-card:hover{
+    background: #45454580;
+    
+}
+.related-card .img-wrapper{
+    width: 50%;
+}
+.related-card h1{
+    text-transform: capitalize;
+    font-family: var(--font-primary);
+    font-size: 1.75rem;
+}
+.related-card button{
+    border: none;
+    color: #808080;
+}
+
 @media screen and (max-width: 678px) {
     .store-card{
         width: 90%;

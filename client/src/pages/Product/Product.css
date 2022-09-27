@@ -59,7 +59,7 @@ span.model{
     font-size: 1.25rem;
     line-height: 2rem;
 }
-.specs-section h2{
+.specs-section h2, .related-section h2{
     color: white;
     font-size: 2rem;
     margin-bottom: 10px;
@@ -71,4 +71,9 @@ span.model{
     margin-top: 5%;
     justify-content: space-between;
     align-items: center;
+}
+.related-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
