@@ -18,6 +18,11 @@
 }
 .product-container .product-body h1{
     font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 2rem;
+}
+span.model{
+    font-weight: 900;
     font-size: 4rem;
 }
 .product-container .product-body .product-price{
@@ -53,4 +58,17 @@
     margin-top: 15px;
     font-size: 1.25rem;
     line-height: 2rem;
+}
+.specs-section h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+.specs-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    justify-content: space-between;
+    align-items: center;
 }
