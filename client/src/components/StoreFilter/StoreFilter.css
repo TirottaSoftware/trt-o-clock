@@ -1,0 +1,25 @@
+.store-filter{
+    width: 30%;
+}
+.store-filter p{
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    text-align: center;
+}
+.store-filter select{
+    background: transparent;
+    color: white;
+    padding: 15px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    width: 100%;
+    border: 1px solid white;
+    appearance: none;
+}
+.store-filter select option{
+    background: black;
+}

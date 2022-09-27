@@ -1,10 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    background: #080808;
+}
+:root{
+    --font-primary: 'Montserrat', sans-serif;
+    --font-heading: 'Playfair Display', serif;
 
+    --color-beige: #E8D3B9
+}
 .hero{
     width: 100%;
     height: 100vh;
-    background-image: url("../../assets/hero.jpg");
+    background-image: url("../../assets/omega-hero.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
 }
+.hero::before{
+     content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+span.hero-bold{
+    font-weight: 900;
+    position: relative;
+}
+
 .hero-text{
     color: white;
     position: absolute;
@@ -13,15 +43,16 @@
 }
 .hero-text h1{
     font-family: var(--font-heading);
-    max-width: 40%;
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 5rem;
+    margin: 0;
+    font-weight: 400;
     text-transform: uppercase;
 }
 .hero-text p{
-    max-width: 30%;
+    max-width: 35%;
     font-family: var(--font-primary);
     margin-bottom: 10px;
+    font-size: 1.25rem;
 }
 .hero-text label{
     font-family: var(--font-primary);
@@ -33,11 +64,19 @@
     text-decoration: none;
     color: white;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--color-beige);
     text-transform: uppercase;
-    padding: 15px 75px;
-    font-family: var(--font-primary);
-    font-size: 1rem;
+    padding: 15px 100px;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-beige);
+    transition: all .5s ease;
+}
+.btn-cta:hover{
+    color: black;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    background-color: var(--color-beige);
 }
 
 section{
@@ -52,8 +91,9 @@ section{
     margin: 3% 0;
 }
 .brands-container{
-    width: 100%;
+    width: 70%;
     display: flex;
+    margin: 0 auto;
     margin-top: 5%;
     display: flex;
     align-items: center;
@@ -76,9 +116,9 @@ section{
     position: relative;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 678px) {
     .hero{
-        background-image: url("../../assets/hero-mobile.png");
+        background-image: url("../../assets/omega-hero.jpg");
     }
     body{
         background: #080808;

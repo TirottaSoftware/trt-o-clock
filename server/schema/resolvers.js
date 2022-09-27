@@ -13,6 +13,27 @@ const resolvers = {
             const watches = await prisma.watch.findMany();
             return watches;
         },
+        async watches(parent, args) {
+            const brand = args.brand;
+            const color = args.color;
+
+            let filter = {}
+            if (brand) {
+                filter.brand = brand;
+            }
+            if (color) {
+                filter.color = color;
+            }
+            if (!color && !brand) {
+                const watches = await prisma.watch.findMany();
+                return watches;
+            }
+
+            const watches = await prisma.watch.findMany({ where: filter });
+            return watches;
+
+
+        },
         async watch(parent, args) {
             const id = Number(args.id);
             const watch = await prisma.watch.findFirst({ where: { id } })

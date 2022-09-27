@@ -21,3 +21,26 @@
     text-align: center;
     color: white;
 }
+.filters-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.product-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.store-filler{
+    flex-grow: 0.75;
+}
+.filter-none{
+    text-align: center;
+    color: white;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    width: 100%;
+    font-size: 1.25rem;
+}

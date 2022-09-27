@@ -1,14 +1,28 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     overflow-x: hidden;
     background: #080808;
 }
+a{
+    text-decoration: none;
+}
+ul, li{
+    list-style: none;
+}
 :root{
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Taviraj', serif;
     --font-heading: 'Heebo', sans-serif;
-    --color-beige: #E8D3B9
+    --color-beige: #E8D3B9;
+}
+.container{
+    width: 80%;
+    margin: 5% auto;
+}
+.img-wrapper img{
+    width: 100%;
 }

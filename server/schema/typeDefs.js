@@ -32,7 +32,7 @@ const typeDefs = gql`
     }
 
     type Query{
-        watches(first: Int): [Watch!]!
+        watches(first: Int, brand: String, color: Color): [Watch!]!
         watch(id: ID!): Watch
     }
 `

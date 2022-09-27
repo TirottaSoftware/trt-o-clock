@@ -46,7 +46,7 @@
   top: 50%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 678px) {
   .carousel-container {
     width: 90%;
     margin: auto;
