@@ -62,7 +62,7 @@ const Store = () => {
                 <div className="products-container">
                     {
                         data?.watches.length > 0 ? data?.watches.map(watch => {
-                            return <StoreCard watch={watch} />
+                            return <StoreCard key={watch.id} watch={watch} />
                         }) : <h2 className="filter-none">There are no items matching these filters.</h2>
                     }
                     <div className="store-filler"></div>

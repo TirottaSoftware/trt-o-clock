@@ -21,10 +21,10 @@ function PaymentForm() {
                     id='cardNumber'
                     name='cardNumber'
                     type="tel"
-                    inputmode="numeric"
+                    inputMode="numeric"
                     pattern="[0-9\s]{13,19}"
-                    autocomplete="cc-number"
-                    maxlength="19"
+                    autoComplete="cc-number"
+                    maxLength="19"
                     onChange={formik.handleChange}
                     value={formik.values.cardNumber}
                     placeholder="Card Number"

@@ -9,7 +9,7 @@ function StoreFilter({ type, options, onChange }) {
                 <option>ALL</option>
                 {
                     options.map(opt => {
-                        return <option>{opt.toString().toUpperCase()}</option>
+                        return <option key={opt.toString()}>{opt.toString().toUpperCase()}</option>
                     })
                 }
             </select>
