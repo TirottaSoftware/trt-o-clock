@@ -34,6 +34,18 @@
     width: 80%;
     margin: 15px auto;
 }
+.cart-items-container .cart-body .cart-items{
+    /* height: 50vh; */
+    overflow-y: scroll;
+}
+.cart-items::-webkit-scrollbar{
+    width: 5px;
+}
+.cart-items::-webkit-scrollbar-thumb {
+    background-color: var(--color-beige);
+    outline: 1px solid var(--color-beige);
+    border-radius: 10px;
+  }
 .cart-items-container .cart-body .form-heading{
     text-align: start;
     width: 80%;
@@ -49,7 +61,7 @@
 .cart-total p{
     font-size: 1.25rem;
 }
-.cart-items-container button{
+.cart-items-container .cart-cta{
     width: 100%;
     margin-top: 25px;
     font-size: 1.25rem;

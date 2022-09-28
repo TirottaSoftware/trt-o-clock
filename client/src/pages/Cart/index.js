@@ -44,10 +44,10 @@ const Cart = () => {
                             </div>
                             <div className="cart-total">
                                 <p>Subtotal</p>
-                                <p>${cart.total}</p>
+                                <p>${cart.total.toFixed(2)}</p>
                             </div>
                         </div>
-                        <button onClick={() => console.log(cart)}>Place Order</button>
+                        <button className="cart-cta" onClick={() => console.log(cart)}>Place Order</button>
                     </div>
                 </div>
             </div>

@@ -14,6 +14,7 @@ const QUERY_SHOWCASED = gql`
       id
       brand
       imageUrl
+      price
       model
       specs
       description
