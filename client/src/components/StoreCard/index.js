@@ -18,9 +18,8 @@ const StoreCard = ({ watch, cardStyle }) => {
             <div className='card-body'>
                 <h1>{watch.model}</h1>
 
-                <Link className='nav-link' to={`/product/${watch.id}`}>
-                    <button onClick={() => { dispatch(addItem(watch)) }}>${watch.price}</button>
-                </Link>
+                <button onClick={() => { dispatch(addItem(watch)) }}>${watch.price}</button>
+
             </div>
         </div>
     )

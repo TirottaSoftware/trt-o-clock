@@ -3,12 +3,17 @@ import showcased from '../../assets/dw-showcased.png'
 import dwLook from '../../assets/dw-look.jpg'
 import dwLogo from '../../assets/daniel-wellington-logo.png';
 import { gql, useQuery } from '@apollo/client'
+import { Link } from 'react-router-dom';
+
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../../redux/slices/cartSlice"
 
 const QUERY_SHOWCASED = gql`
   query GetWatch($watchId: ID!){
     watch(id: $watchId) {
       id
       brand
+      imageUrl
       model
       specs
       description
@@ -16,6 +21,10 @@ const QUERY_SHOWCASED = gql`
 }
 `
 const Featured = () => {
+
+    const c = useSelector(addItem);
+
+    const dispatch = useDispatch();
     const { data, loading } = useQuery(QUERY_SHOWCASED, { variables: { watchId: 20 } });
     return (
         <>
@@ -38,8 +47,10 @@ const Featured = () => {
                         <div className='description'>
                             <img src={dwLogo} alt='' />
                             <p>{data.watch.description}</p>
-                            <button className='btn-cta bg-beige'>Go To Product</button>
-                            <button className='btn-cta'>Add To Cart</button>
+                            <Link className='btn-cta bg-beige' to='/product/21'>
+                                <button className='btn-cta'>Go To Product</button>
+                            </Link>
+                            <button onClick={() => { dispatch(addItem(data.watch)) }} className='btn-cta'>Add To Cart</button>
                         </div>
                         <img src={dwLook} alt='' />
                     </div>

@@ -8,6 +8,8 @@ import Navbar from '../../components/Navbar'
 import Sidebar from '../../components/Sidebar'
 import SpecCard from '../../components/SpecCard'
 import StoreCard from '../../components/StoreCard'
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../../redux/slices/cartSlice"
 
 const QUERY_WATCH = gql`
     query GetWatch($watchId: ID!){
@@ -41,6 +43,9 @@ const QUERY_RELATED = gql`
 `
 
 function ProductPage() {
+    const c = useSelector(addItem);
+
+    const dispatch = useDispatch();
 
     const { id } = useParams();
     const { data, loading } = useQuery(QUERY_WATCH, {
@@ -75,7 +80,7 @@ function ProductPage() {
                                 <h1><span className='model'>{watch?.model}</span> {watch?.brand}</h1>
                                 <div className='product-price'>
                                     <p>${watch?.price}</p>
-                                    <button className='cta cart-cta'>Add To Cart</button>
+                                    <button onClick={() => { dispatch(addItem(watch)) }} className='cta cart-cta'>Add To Cart</button>
                                 </div>
                                 <p className='product-description'>{watch?.description}</p>
                             </div>
