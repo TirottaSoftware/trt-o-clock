@@ -32,3 +32,18 @@
 .billing-form .cart-row-3 input{
     width: 30%;
 }
+
+@media screen and (max-width: 678px) {
+    
+    .billing-form .cart-row-3{
+        flex-flow: column;
+        margin-top: 25px;
+    }
+    .billing-form .cart-row-3 input{
+        width: 100%;
+        margin: 25px 0;
+    }
+.billing-form .cart-row input{
+        font-size: 1rem;
+    }
+}

@@ -48,3 +48,24 @@
     border: none;
     margin-left: 15px;
 }
+
+@media screen and (max-width: 678px) {
+    .cart-item{
+        width: 100%;
+    }
+    .cart-item .img-wrapper{
+        width: 40%;
+    }
+    .cart-item .item-body{
+        width: 55%;
+    }
+    .cart-item .item-body .item-info h3{
+        font-size: 1.25rem;
+    }
+    .cart-item .item-body .item-info h6{
+        font-size: .9rem;
+    }
+    .cart-item .item-body .item-price p{
+        font-size: 1rem;
+    }
+}

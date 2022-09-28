@@ -73,3 +73,25 @@
     cursor: pointer;
     border: 1px solid white;
 }
+.cart-items-container .cart-cta:hover{
+    border-color: var(--color-beige);
+    color: var(--color-beige);
+}
+
+@media screen and (max-width: 678px) {
+    .cart-container{
+        flex-flow: column;
+        padding-top:7.5%;
+    }
+    .shipping-container{
+        width: 90%;
+        margin: 25px auto;
+    }
+    .cart-items-container{
+        width: 90%;
+        margin: 25px auto;
+    }
+    .cart-items-container .cart-body .cart-items{
+        height: unset;
+    }
+}
