@@ -33,6 +33,10 @@ body{
 span.hero-bold{
     font-weight: 900;
     position: relative;
+    font-size: 5rem; 
+    background: -webkit-linear-gradient(0deg, var(--color-beige) 0%, white 50%, var(--color-beige) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-text{
@@ -43,7 +47,7 @@ span.hero-bold{
 }
 .hero-text h1{
     font-family: var(--font-heading);
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
     font-weight: 400;
     text-transform: uppercase;

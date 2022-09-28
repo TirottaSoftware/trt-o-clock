@@ -5,11 +5,17 @@ import { useState } from "react"
 import Sidebar from "../../components/Sidebar"
 import BillingForm from "../../components/BillingForm"
 import PaymentForm from "../../components/PaymentForm"
+import CartItem from '../../components/CartItem'
+import { useSelector, useDispatch } from "react-redux";
+import { removeItem } from "../../redux/slices/cartSlice"
 
 
 const Cart = () => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const { cart, isLoading } = useSelector(state => state.cart);
+
+    const dispatch = useDispatch();
 
     return (
         <div>
@@ -32,14 +38,16 @@ const Cart = () => {
                             <h2 className="form-heading">Order Summary</h2>
                             <hr />
                             <div className="cart-items">
-                                {/* Cart Items Go Here */}
+                                {cart.items?.map(item => {
+                                    return <CartItem item={item} removeItem={(id) => { dispatch(removeItem(item.id)); }} />
+                                })}
                             </div>
                             <div className="cart-total">
                                 <p>Subtotal</p>
-                                <p>$198.00</p>
+                                <p>${cart.total}</p>
                             </div>
                         </div>
-                        <button>Place Order</button>
+                        <button onClick={() => console.log(cart)}>Place Order</button>
                     </div>
                 </div>
             </div>

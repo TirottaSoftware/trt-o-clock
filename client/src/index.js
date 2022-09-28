@@ -6,7 +6,9 @@ import Store from "./pages/Store";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import ProductPage from "./pages/Product";
 import ScrollToTop from "./components/ScrollToTop";
+import { Provider } from "react-redux";
 import Cart from "./pages/Cart";
+import store from './redux/store'
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -16,15 +18,17 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ApolloProvider client={client}>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/store" element={<Store />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </ApolloProvider>
 );

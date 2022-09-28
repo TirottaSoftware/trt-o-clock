@@ -20,10 +20,14 @@ function PaymentForm() {
                 <input
                     id='cardNumber'
                     name='cardNumber'
-                    type='text'
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9\s]{13,19}"
+                    autocomplete="cc-number"
+                    maxlength="19"
                     onChange={formik.handleChange}
                     value={formik.values.cardNumber}
-                    placeholder="Cart Number"
+                    placeholder="Card Number"
                 />
             </div>
             <div className='cart-row cart-row-2'>

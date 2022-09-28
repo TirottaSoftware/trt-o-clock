@@ -1,4 +1,4 @@
-function CartItem({ item }) {
+function CartItem({ item, removeItem }) {
     return (
         <div className='cart-item'>
             <div className='img-wrapper'>
@@ -10,7 +10,7 @@ function CartItem({ item }) {
             </div>
             <div className='item-price'>
                 <p>{item.price}</p>
-                <button>O</button>
+                <button onClick={removeItem}>Remove Item</button>
             </div>
         </div>
     )

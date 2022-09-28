@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom'
 import './StoreCard.css'
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../../redux/slices/cartSlice"
 
 const StoreCard = ({ watch, cardStyle }) => {
+    const c = useSelector(addItem);
+
+    const dispatch = useDispatch();
+
     return (
         <div className={`store-card ${cardStyle === "related" ? "related-card" : ""}`}>
             <div className='img-wrapper'>
@@ -13,7 +19,7 @@ const StoreCard = ({ watch, cardStyle }) => {
                 <h1>{watch.model}</h1>
 
                 <Link className='nav-link' to={`/product/${watch.id}`}>
-                    <button>${watch.price}</button>
+                    <button onClick={() => { dispatch(addItem(watch)) }}>${watch.price}</button>
                 </Link>
             </div>
         </div>
