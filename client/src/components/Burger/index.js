@@ -6,6 +6,7 @@ const Burger = ({ onClick }) => {
         <div className='burger' onClick={onClick}>
             <div className='burger-line'></div>
             <div className='burger-line'></div>
+            <div className='burger-line'></div>
         </div>
     )
 }
