@@ -37,7 +37,9 @@ function Home() {
             {/* <p>Loved on Earth and beyond, the Speedmaster Moonwatch remains a true icon in the world of watchmaking. For its most recent update, the legendary chronograph has been inspired by its own historical design, while the Master Chronometer certification provides even more reliability and excellence.</p> */}
             {/* <label>$4,000.00</label> */}
             <br />
-            <button className='btn-cta'>Discover</button>
+            <Link to='/product/5'>
+              <button className='btn-cta'>Discover</button>
+            </Link>
           </div>
         </div>
         <section id="brands">
