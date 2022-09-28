@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import './StoreCard.css'
 import { useSelector, useDispatch } from "react-redux";
 import { addItem } from "../../redux/slices/cartSlice"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const StoreCard = ({ watch, cardStyle }) => {
     const c = useSelector(addItem);
@@ -18,7 +20,7 @@ const StoreCard = ({ watch, cardStyle }) => {
             <div className='card-body'>
                 <h1>{watch.model}</h1>
 
-                <button onClick={() => { dispatch(addItem(watch)) }}>${watch.price}</button>
+                <button onClick={() => { dispatch(addItem(watch)); toast.success("Item added to cart", { toastId: "cart1" }) }}>${watch.price}</button>
 
             </div>
         </div>

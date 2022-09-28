@@ -35,7 +35,7 @@
     margin: 15px auto;
 }
 .cart-items-container .cart-body .cart-items{
-    /* height: 50vh; */
+    height: 50vh;
     overflow-y: scroll;
 }
 .cart-items::-webkit-scrollbar{

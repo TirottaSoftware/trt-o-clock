@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { Provider } from "react-redux";
 import Cart from "./pages/Cart";
 import store from './redux/store'
+import { ToastContainer } from 'react-toastify';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -18,6 +19,13 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ApolloProvider client={client}>
+    <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      newestOnTop={false}
+      closeOnClick
+      theme="dark"
+    />
     <Provider store={store}>
       <BrowserRouter>
         <ScrollToTop />
