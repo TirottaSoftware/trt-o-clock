@@ -1,0 +1,34 @@
+.billing-form{
+    width: 90%;
+    margin: 5% auto;
+}
+.billing-form .cart-row {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.billing-form .cart-row input{
+    font-size: 1.25rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    padding-bottom: 15px;
+    color: white;
+    outline: none;
+}
+.billing-form .cart-row input::placeholder{
+    font-family: var(--font-primary);
+    color: white;
+}
+
+.billing-form .cart-row-1 input{
+    width: 100%;
+}
+.billing-form .cart-row-2 input{
+    width: 45%;
+}
+.billing-form .cart-row-3 input{
+    width: 30%;
+}

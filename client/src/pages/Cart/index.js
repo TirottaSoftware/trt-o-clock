@@ -3,6 +3,8 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { useState } from "react"
 import Sidebar from "../../components/Sidebar"
+import BillingForm from "../../components/BillingForm"
+import PaymentForm from "../../components/PaymentForm"
 
 
 const Cart = () => {
@@ -17,17 +19,17 @@ const Cart = () => {
                 <div className="cart-container container">
                     <div className="shipping-container">
                         <div className="billing-container">
-                            <h2>Billing Address</h2>
-                            {/* BillingForm */}
+                            <h2 className="form-heading">Billing Address</h2>
+                            <BillingForm />
                         </div>
                         <div className="payment-container">
-                            <h2>Payment Info</h2>
-                            {/* PaymentInfoForm */}
+                            <h2 className="form-heading">Payment Info</h2>
+                            <PaymentForm />
                         </div>
                     </div>
-                    <div className="cart-container">
+                    <div className="cart-items-container">
                         <div className="cart-body">
-                            <h2>Order Summary</h2>
+                            <h2 className="form-heading">Order Summary</h2>
                             <hr />
                             <div className="cart-items">
                                 {/* Cart Items Go Here */}
