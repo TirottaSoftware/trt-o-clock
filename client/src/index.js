@@ -6,6 +6,7 @@ import Store from "./pages/Store";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import ProductPage from "./pages/Product";
 import ScrollToTop from "./components/ScrollToTop";
+import Cart from "./pages/Cart";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -22,6 +23,7 @@ root.render(
         <Route path="/home" element={<Home />} />
         <Route path="/store" element={<Store />} />
         <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   </ApolloProvider>
