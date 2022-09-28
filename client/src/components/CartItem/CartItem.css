@@ -42,8 +42,9 @@
 .cart-item .item-body .item-price .cart-remove{
     width: 25px;
     height: 25px;
-    background: white;
-    border-radius: 50%;
+    color: white;
+    background: transparent;
+    cursor: pointer;
     border: none;
-    margin-left: 10px;
+    margin-left: 15px;
 }

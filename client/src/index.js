@@ -8,13 +8,18 @@ import ProductPage from "./pages/Product";
 import ScrollToTop from "./components/ScrollToTop";
 import { Provider } from "react-redux";
 import Cart from "./pages/Cart";
-import store from './redux/store'
 import { ToastContainer } from 'react-toastify';
+
+import store from './redux/store'
+import { PersistGate } from 'redux-persist/integration/react'
+import { persistStore } from 'redux-persist'
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   uri: `http://localhost:4000/graphql`
 })
+
+let persistor = persistStore(store);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,16 +32,18 @@ root.render(
       theme="dark"
     />
     <Provider store={store}>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </BrowserRouter>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </PersistGate>
     </Provider>
   </ApolloProvider>
 );

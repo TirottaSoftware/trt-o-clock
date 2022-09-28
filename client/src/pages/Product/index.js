@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { gql, useQuery } from '@apollo/client'
+import { toast } from 'react-toastify'
 
 import './Product.css'
 import { useParams } from 'react-router'
@@ -80,7 +81,7 @@ function ProductPage() {
                                 <h1><span className='model'>{watch?.model}</span> {watch?.brand}</h1>
                                 <div className='product-price'>
                                     <p>${watch?.price}</p>
-                                    <button onClick={() => { dispatch(addItem(watch)) }} className='cta cart-cta'>Add To Cart</button>
+                                    <button onClick={() => { dispatch(addItem(data.watch)); toast.success("Item added to cart", { toastId: "cart1" }) }} className='cta cart-cta'>Add To Cart</button>
                                 </div>
                                 <p className='product-description'>{watch?.description}</p>
                             </div>

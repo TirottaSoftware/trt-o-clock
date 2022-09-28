@@ -1,4 +1,5 @@
 import './CartItem.css';
+import { TrashIcon } from '@heroicons/react/outline'
 
 function CartItem({ item, removeItem }) {
     return (
@@ -14,7 +15,9 @@ function CartItem({ item, removeItem }) {
                 </div>
                 <div className='item-price'>
                     <p>${item.price}</p>
-                    <button className='cart-remove' onClick={removeItem}></button>
+                    <button className='cart-remove' onClick={removeItem}>
+                        <TrashIcon />
+                    </button>
                 </div>
             </div>
         </div>

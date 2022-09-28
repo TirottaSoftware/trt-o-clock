@@ -3,6 +3,7 @@ import showcased from '../../assets/dw-showcased.png'
 import dwLook from '../../assets/dw-look.jpg'
 import dwLogo from '../../assets/daniel-wellington-logo.png';
 import { gql, useQuery } from '@apollo/client'
+import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom';
 
 import { useSelector, useDispatch } from "react-redux";
@@ -48,10 +49,10 @@ const Featured = () => {
                         <div className='description'>
                             <img src={dwLogo} alt='' />
                             <p>{data.watch.description}</p>
-                            <Link className='btn-cta bg-beige' to='/product/21'>
+                            <Link className='btn-cta bg-beige' to='/product/20'>
                                 <button className='btn-cta'>Go To Product</button>
                             </Link>
-                            <button onClick={() => { dispatch(addItem(data.watch)) }} className='btn-cta'>Add To Cart</button>
+                            <button onClick={() => { dispatch(addItem(data.watch)); toast.success("Item added to cart", { toastId: "cart1" }) }} className='btn-cta'>Add To Cart</button>
                         </div>
                         <img src={dwLook} alt='' />
                     </div>
