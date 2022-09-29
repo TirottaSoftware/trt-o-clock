@@ -17,7 +17,7 @@ const Sidebar = ({ open, hideSidebar }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link className='sidebar-link' to="/home">
+                    <Link className='sidebar-link' to="/contact">
                         Contact
                     </Link>
                 </li>

@@ -13,6 +13,7 @@ import { ToastContainer } from 'react-toastify';
 import store from './redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
+import Contact from "./pages/Contact";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -41,6 +42,7 @@ root.render(
             <Route path="/store" element={<Store />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>
