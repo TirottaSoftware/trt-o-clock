@@ -75,7 +75,7 @@ function ProductPage() {
                         <Sidebar open={sidebarOpen} hideSidebar={() => setSidebarOpen(false)} />
                         <div className='product-container'>
                             <div className='img-wrapper'>
-                                <img src={watch?.imageUrl} alt="Product Image" />
+                                <img src={watch?.imageUrl} alt="Product" />
                             </div>
                             <div className='product-body'>
                                 <h1><span className='model'>{watch?.model}</span> {watch?.brand}</h1>

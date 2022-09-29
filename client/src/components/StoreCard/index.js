@@ -14,7 +14,7 @@ const StoreCard = ({ watch, cardStyle }) => {
         <div className={`store-card ${cardStyle === "related" ? "related-card" : ""}`}>
             <div className='img-wrapper'>
                 <Link className='nav-link' to={`/product/${watch.id}`}>
-                    <img src={watch.imageUrl} alt='productImage' />
+                    <img src={watch.imageUrl} alt='Product' />
                 </Link>
             </div>
             <div className='card-body'>

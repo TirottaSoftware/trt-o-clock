@@ -31,7 +31,6 @@ const resolvers = {
             if (sort) {
                 orderFilter[sort.field] = sort.order.toLowerCase();
             }
-            console.log("Sorting Filter: ", orderFilter)
             if (!color && !brand) {
                 const watches = await prisma.watch.findMany({ orderBy: orderFilter });
                 return watches;
@@ -39,7 +38,7 @@ const resolvers = {
 
             if (first) {
                 // const watches = await prisma.watch.findMany({ take: first, where: whereFilter });
-                const watches = await prisma.watch.findMany({ take: first, where: filter, orderBy: orderFilter });
+                const watches = await prisma.watch.findMany({ take: first, where: whereFilter, orderBy: orderFilter });
                 return watches;
             }
             else {

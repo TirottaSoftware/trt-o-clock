@@ -5,7 +5,7 @@ function CartItem({ item, removeItem }) {
     return (
         <div className='cart-item'>
             <div className='img-wrapper'>
-                <img src={item.imageUrl} alt="Cart Item Image" />
+                <img src={item.imageUrl} alt="Cart Item" />
             </div>
             <div className='item-body'>
 
