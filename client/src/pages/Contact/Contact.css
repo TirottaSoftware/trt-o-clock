@@ -56,3 +56,20 @@
 .social-media-row p{
     margin-left: 25px;
 }
+
+@media screen and (max-width: 678px) {
+    .contact-section{
+        padding-top: 10%;
+    }
+    .contact-section-wrapper{
+        flex-flow: column;
+    }
+    .contact-img-wrapper, .contact-info-container{
+        width: 90%;
+        margin: 25px auto;
+    }
+    .contact-info-container .contact-info-row{
+        flex-flow: column;
+        text-align: center;
+    }
+}
