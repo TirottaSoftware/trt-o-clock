@@ -35,24 +35,24 @@ const Featured = () => {
                     <div className='featured-container'>
                         <img src={showcased} alt='' />
                         <div className='specs'>
-                            <h1>{data.watch.model}</h1>
-                            <h2>By {data.watch.brand}</h2>
+                            <h1>{data?.watch.model}</h1>
+                            <h2>By {data?.watch.brand}</h2>
                             <div className='specs-table'>
-                                {Object.keys(data.watch.specs).map((key, index) => {
+                                {Object.keys(data?.watch.specs).map((key, index) => {
                                     return <div key={key} className='specs-row'>
                                         <label>{key}</label>
-                                        <label>{data.watch.specs[key]}</label>
+                                        <label>{data?.watch.specs[key]}</label>
                                     </div>
                                 })}
                             </div>
                         </div>
                         <div className='description'>
                             <img src={dwLogo} alt='' />
-                            <p>{data.watch.description}</p>
+                            <p>{data?.watch.description}</p>
                             <Link className='btn-cta bg-beige' to='/product/20'>
                                 <button className='btn-cta'>Go To Product</button>
                             </Link>
-                            <button onClick={() => { dispatch(addItem(data.watch)); toast.success("Item added to cart", { toastId: "cart1" }) }} className='btn-cta'>Add To Cart</button>
+                            <button onClick={() => { dispatch(addItem(data?.watch)); toast.success("Item added to cart", { toastId: "cart1" }) }} className='btn-cta'>Add To Cart</button>
                         </div>
                         <img src={dwLook} alt='' />
                     </div>

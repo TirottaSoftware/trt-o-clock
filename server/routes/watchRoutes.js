@@ -3,6 +3,7 @@ const { PrismaClient } = require("@prisma/client");
 const router = express.Router();
 const prisma = new PrismaClient();
 
+
 router.get("/", async (req, res) => {
   const brand = req.query.brand?.toUpperCase()
   const color = req.query.color?.toUpperCase()

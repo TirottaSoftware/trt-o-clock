@@ -14,7 +14,7 @@ model Watch {
   id          Int     @id @default(autoincrement())
   brand       Brand
   model       String  @db.VarChar(255)
-  price       Decimal @db.Decimal(6, 2)
+  price       Decimal @db.Decimal(7, 2)
   description String  @db.Text
   imageUrl    String  @db.VarChar(255)
   color       Color
