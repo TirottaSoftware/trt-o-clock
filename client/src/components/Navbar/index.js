@@ -18,7 +18,7 @@ const Navbar = ({ toggleSidebar }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link className='nav-link' to="/home">
+                    <Link className='nav-link' to="/contact">
                         Contact
                     </Link>
                 </li>

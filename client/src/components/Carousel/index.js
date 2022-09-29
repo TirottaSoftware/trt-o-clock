@@ -18,7 +18,6 @@ const QUERY_ALL_WATCHES = gql`
 
 const Carousel = () => {
     const { data, loading } = useQuery(QUERY_ALL_WATCHES);
-    console.log(data);
     const [activeSlide, setActiveSlide] = useState(1);
 
     const nextSlide = () => {

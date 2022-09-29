@@ -39,7 +39,7 @@ const Featured = () => {
                             <h2>By {data.watch.brand}</h2>
                             <div className='specs-table'>
                                 {Object.keys(data.watch.specs).map((key, index) => {
-                                    return <div className='specs-row'>
+                                    return <div key={key} className='specs-row'>
                                         <label>{key}</label>
                                         <label>{data.watch.specs[key]}</label>
                                     </div>
