@@ -15,6 +15,21 @@ const typeDefs = gql`
         features: JSON
     }
 
+    enum SortOrder{
+        ASC
+        DESC
+    }
+
+    enum SortableField{
+        model
+        price
+    }
+
+    input Sort{
+        field: SortableField
+        order: SortOrder = ASC
+    }
+
     enum Color{
         WHITE
         BLACK
@@ -32,7 +47,7 @@ const typeDefs = gql`
     }
 
     type Query{
-        watches(first: Int, brand: String, color: Color): [Watch!]!
+        watches(first: Int, brand: String, color: Color, sort: Sort): [Watch!]!
         watch(id: ID!): Watch
     }
 `
