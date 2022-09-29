@@ -17,7 +17,7 @@ const QUERY_ALL_WATCHES = gql`
 `
 
 const Carousel = () => {
-    const { data, loading } = useQuery(QUERY_ALL_WATCHES);
+    const { data, loading } = useQuery(QUERY_ALL_WATCHES, { fetchPolicy: "no-cache" });
     const [activeSlide, setActiveSlide] = useState(1);
 
     const nextSlide = () => {

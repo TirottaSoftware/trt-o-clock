@@ -5,7 +5,7 @@ const { ApolloServer } = require("apollo-server-express")
 const { typeDefs } = require('./schema/typeDefs')
 const { resolvers } = require('./schema/resolvers')
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers });
+const apolloServer = new ApolloServer({ typeDefs, resolvers, introspection: true });
 
 // apolloServer.listen(process.env.PORT || 4000).then(({ url }) => {
 //   console.log("Apollo Server running on " + url)

@@ -9,7 +9,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import { Provider } from "react-redux";
 import Cart from "./pages/Cart";
 import { ToastContainer } from 'react-toastify';
-
 import store from './redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
@@ -17,9 +16,11 @@ import Contact from "./pages/Contact";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: process.env.APP_URL
+  // uri: process.env.APP_URL
+  uri: `https://trt-o-clock.herokuapp.com/api`
 })
 
+console.log(process.env.REACT_APP_URL)
 let persistor = persistStore(store);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

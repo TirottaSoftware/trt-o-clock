@@ -8,19 +8,12 @@ import Footer from '../../components/Footer';
 import Carousel from '../../components/Carousel';
 
 import { useState } from 'react';
-// import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import casioLogo from '../../assets/casio-logo.png';
 import dwLogo from '../../assets/daniel-wellington-logo.png';
 import seikoLogo from '../../assets/seiko-logo.png';
 import omegaLogo from '../../assets/omega-logo.png';
 import { Link } from 'react-router-dom';
-
-
-// const client = new ApolloClient({
-//   cache: new InMemoryCache(),
-//   uri: `http://localhost:4000/graphql`
-// })
 
 function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -34,8 +27,6 @@ function Home() {
           <div className='hero-text'>
             <h1>EXPRESS YOURSELF</h1>
             <h1>WITH <span className='hero-bold'>PROFESSIONALISM</span></h1>
-            {/* <p>Loved on Earth and beyond, the Speedmaster Moonwatch remains a true icon in the world of watchmaking. For its most recent update, the legendary chronograph has been inspired by its own historical design, while the Master Chronometer certification provides even more reliability and excellence.</p> */}
-            {/* <label>$4,000.00</label> */}
             <br />
             <Link to='/product/5'>
               <button className='btn-cta'>Discover</button>

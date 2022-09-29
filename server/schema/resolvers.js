@@ -4,15 +4,15 @@ const prisma = new PrismaClient();
 
 const resolvers = {
     Query: {
-        async watches(parent, args) {
-            const first = args.first;
-            if (first) {
-                const watches = await prisma.watch.findMany({ take: first, where: { ATF: true } });
-                return watches;
-            }
-            const watches = await prisma.watch.findMany();
-            return watches;
-        },
+        // async watches(parent, args) {
+        //     const first = args.first;
+        //     if (first) {
+        //         const watches = await prisma.watch.findMany({ take: first, where: { ATF: true } });
+        //         return watches;
+        //     }
+        //     const watches = await prisma.watch.findMany();
+        //     return watches;
+        // },
         async watches(parent, args) {
             const first = args.first;
             const brand = args.brand;
@@ -31,8 +31,9 @@ const resolvers = {
             if (sort) {
                 orderFilter[sort.field] = sort.order.toLowerCase();
             }
+
             if (!color && !brand) {
-                const watches = await prisma.watch.findMany({ orderBy: orderFilter });
+                const watches = await prisma.watch.findMany({ take: first, orderBy: orderFilter });
                 return watches;
             }
 
