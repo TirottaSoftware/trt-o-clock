@@ -17,7 +17,7 @@ import Contact from "./pages/Contact";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: `http://localhost:4000/graphql`
+  uri: process.env.APP_URL
 })
 
 let persistor = persistStore(store);
