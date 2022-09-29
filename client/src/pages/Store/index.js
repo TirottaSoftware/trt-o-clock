@@ -55,7 +55,7 @@ const Store = () => {
                     tempFilter.sort = { field: "price", order: "ASC" }
                     break;
                 default:
-                    tempFilter.sort = {}
+                    tempFilter.sort = null;
                     break;
             }
         }
