@@ -29,6 +29,9 @@
     margin: 2.5% 15% 2.5% 5%;
     text-align: start;
 }
+.footer-links li .nav-link{
+    font-size: 1.25rem;
+}
 .newsletter{
     width: 40%;
     display: flex;
@@ -71,7 +74,7 @@
         margin: 2.5% auto;
     }
     .footer-main .img-wrapper{
-        width: 400px;
+        width: 300px;
         margin: 0 auto;
     }
     .newsletter{
@@ -83,6 +86,10 @@
         font-size: 18px;
     }
     .newsletter input{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-progress-appearance: none;
         padding: 0;
         width: 100%;
         padding: 5%;

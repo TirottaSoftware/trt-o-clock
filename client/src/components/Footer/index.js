@@ -1,5 +1,6 @@
 import './Footer.css'
 import logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -9,12 +10,21 @@ const Footer = () => {
                     <img className='logo' src={logo} alt={`TRT O'Clock Logo`} />
                 </div>
                 <div className='footer-links'>
-                    <li>Terms & Conditions</li>
-                    <li>Sign Up</li>
-                    <li>Contacts</li>
-                    <li>My Purchases</li>
-                    <li>Privacy Policy</li>
-                    <li>My Profile</li>
+                    <li>
+                        <Link className='nav-link' to="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className='nav-link' to="/store">
+                            Store
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className='nav-link' to="/contact">
+                            Contact Us
+                        </Link>
+                    </li>
                 </div>
             </div>
             <div className='newsletter'>

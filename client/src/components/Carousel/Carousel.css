@@ -98,10 +98,8 @@
         z-index: 0;
         opacity: 0;
     }
-    /* .arrow-next{
-        right: 5px;
+    .arrow-prev, .arrow-next{
+        width: 40px;
+        height: 40px;
     }
-    .arrow-prev{
-        left: 5px;
-    } */
 }

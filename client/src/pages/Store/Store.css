@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 678px) {
     .store-hero-text{
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
     .filters-container, .products-container{
         flex-flow: column;

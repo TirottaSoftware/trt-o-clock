@@ -141,7 +141,7 @@ section{
     }
     .hero-text h1{
         max-width: unset;
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     .hero-text p{
         width: 90%;
@@ -172,6 +172,6 @@ section{
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/favourites.jpg');;
     }
     span.hero-bold{
-        font-size: 2.75rem;
+        font-size: 2.15rem;
     }
 }

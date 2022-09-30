@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 .billing-form .cart-row input{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
     font-size: 1.25rem;
     background: transparent;
     border: none;
